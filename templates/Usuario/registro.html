@@ -1,0 +1,53 @@
+{% extends "plantilla_usuario.html" %}
+{% block title %}Contacto{% endblock %}
+{% load static %}
+{% load i18n %}
+{% block Usuario %}
+    <div class="container-fluid">
+        <div class="row reflexion justify-content-center align-items-center border" style="padding-top:20px;">   
+            <div class="col-12 col-md-5 contacto_form" style="padding-bottom:15px;">
+                <div class="position-relative mb-5 mt-4">
+                    <h1 class="h1juan position-absolute start-50 translate-middle" style="padding-left:100px; color: #000;">
+                    Registrarse
+                    </h1>
+                </div>
+                <form method="POST" action="" class="col-xs-12" style="padding-top: 20px;">{% csrf_token %}   
+                    <label for="id_username" class="form-label fs-5 ps-4 d-flex justify-content-start" >Username:</label>
+                    <div class="mb-3 ps-5">
+                        <input itemprop="agent" type="text" name="username" maxlength="150" autofocus="" required="" id="id_username" style="color: #000;"class="form-control border-2 border-primary p-2 mb-2 border-opacity-150 custom-input w-50">
+                        <div class="form-text" id="basic-addon4" >El nombre de usuario debe ser hasta 150 caracteres. Solo usar letras, digitos y @/./+/-/_ </div>
+                    </div>
+                    <label for="id_email" class="form-label fs-5 ps-4 d-flex justify-content-start">Email address:</label>
+                    <div class="mb-3 ps-5">
+                        <div class="input-group mb-3">
+                            <input itemprop="agent" class="form-control border-2 border-primary p-2 mb-2 border-opacity-150" placeholder="Username" aria-label="Username" type="email" name="email" maxlength="254" id="id_email" >
+                        </div>
+                    </div>
+                    <label for="id_password1" class="form-label fs-5 ps-4 d-flex justify-content-start">Password:</label>
+                        <div class="mb-3 ps-5">                    
+                        <input type="password" name="password1" autocomplete="new-password" required="" id="id_password1" class="form-control border-2 border-primary p-2 mb-2 border-opacity-150 custom-input w-50" placeholder="use al menos 8 caracteres"  itemprop="instrument">
+                        <span class="helptext">
+                        <div class="form-text" id="basic-addon4">Tu contraseña no debe ser muy similar a tu otra informacion personal</div>
+                        <div class="form-text" id="basic-addon4">Tu contraseña no debe ser una contraseña usada comunmente</div>
+                        <div class="form-text" id="basic-addon4">Tu contraseña no puede ser completamente numerica</div>
+                        </span>
+                        </div>
+                    <label for="id_password2" class="form-label fs-5 ps-4 d-flex justify-content-start">Password confirmation:</label>
+                    <div class="ps-5 d-flex justify-content-start">    
+                        <div>                    
+                        <input type="password" name="password2" autocomplete="new-password" required="" id="id_password2" class="form-control border-2 border-primary p-2 mb-2 border-opacity-150 custom-input w-50"  placeholder="repita contraseña"  itemprop="instrument">
+                        <span class="helptext">
+                            <div class="form-text" id="basic-addon4">Ponga la misma contraseña que antes, para verificacion<div>    
+                        </span>     
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-end">
+                        <button itemprop="potentialAction" type="submit" class="btn btn-danger float-right">
+                                Registrar
+                        </button>
+                    </div>
+                </form>  
+            </div>    
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,51 @@
+{% extends "plantilla_contacto.html" %}
+{% load static %}
+{% load i18n %}
+{% block contacto %}
+
+<div style="background-color: rgb(163, 164, 164)" class="p-0 m-0">
+<div class="container-fluid" style="width: 80vw;  height: 100vh;">
+	<div class="row reflexion justify-content-around align-items-center border m-0 p-0" style="padding-top:20px; ">   
+		<div class="col-12 contacto_form" style="padding-bottom:15px;">
+			<div class="d-flex justify-content-center align-items-center pb-3">
+				<h1 class="h1juan">Preguntas Frecuentes</h1>
+			</div> 
+			<center><h2> ¿En qué podemos ayudarte?</h2></center>
+			<div class="col-12 w-100">
+				<div style="font-weight: 500; font-size: 1.5rem;" class="pe-5">
+					Que es Huellas?
+				</div>
+				<div class="ps-2">
+					<div class="form-text p-1 rounded" id="basic-addon4" style="background-color: rgb(255, 255, 255);">Huellas deja contar historias anónimas o personales de Usuario para compartir experiencias comunes y series. </div>
+				</div>
+				<div style="font-weight: 500; font-size: 1.5rem;" class="pe-5">
+					¿Qué tipo de historias hay?
+				</div>
+				<div class="ps-2">
+					<div class="form-text p-2 rounded" id="basic-addon4" style="background-color: rgb(255, 255, 255);">
+						Huellas deja Huellas quiere compartir pequeños recuerdos que para muchos son insignificante, pero son personalmente importantes, este es la primera historia personal del creador del sitios: 
+						<div class="border-start border-end border-4 p-3">"Me empezó a interesar la comida comprada y quería cocinar, pero aun así compramos comida de lugares y como parece abrirse un restáurate cada semana probamos varios lugares, me preocupan los precios y el sabor y cree una lista para cada tipo de comida, su precio y como sabia. No soy un catador experto, pero esto me ha dejado probar varias cosas nuevas y cada sabor es una cosa nueva aprendida."
+						</div>
+					</div>
+				</div>
+				<div style="font-weight: 500; font-size: 1.5rem;" class="pe-5">
+					Tengo una pregunta que no tiene repuesta
+				</div>
+				<div class="ps-2">
+					<div class="form-text p-1 rounded" id="basic-addon4" style="background-color: rgb(255, 255, 255);">Toda consulta la puede encontrar en <a href="{% url 'contacto' %}">Contacto</a>.
+					O llendo al boton Ayuda y cliquear en Contacto. </div>
+				</div>
+				<div style="font-weight: 500; font-size: 1.5rem;" class="pe-5">
+					Tengo una historia pero no se si se puede mostrar
+				</div>
+				<div class="ps-2">
+					<div class="form-text p-1 rounded" id="basic-addon4" style="background-color: rgb(255, 255, 255);">Toda historia puede ser enviada por consulta por si tienes dudas</div>
+				</div>
+			</div>
+		</div>    
+	</div>  
+</div> 
+</div> 
+   
+{% endblock %}
+

@@ -1,0 +1,50 @@
+{% extends "plantilla_usuario.html" %}
+{% block title %}Contacto{% endblock %}
+{% load static %}
+{% load i18n %}
+{% block Usuario %}
+<!-- ---------------------------------------------------------------------------
+
+------------------------------------------------------------------------------->
+
+<div class="container-fluid">
+    <div class="row reflexion justify-content-around align-items-center border" style="padding-top:20px;">   
+        <div class="col-12 col-md-5 contacto_form" style="padding-bottom:15px;">
+            <div class="position-relative mb-5 mt-4">
+                <h1 class="h1juan position-absolute start-50 translate-middle">Login</h1>    
+            </div>
+            <form action="" method="POST" class="col-xs-12" style="padding-top: 20px;" itemscope itemtype="https://schema.org/Action">{% csrf_token %}
+                <label class="form-label fs-4 ps-5">Nombre de Usuario</label>
+                <div class=" d-flex justify-content-center" itemprop="agent">
+                    <input type="text" name="username" class="form-control border-2 border-primary p-2 mb-2 border-opacity-150 custom-input w-50" placeholder="ej: Tomas123" aria-describedby="basic-addon3 basic-addon4">
+                </div>
+                <label class="form-label fs-4 ps-5">Contraseña</label>
+                <div class="d-flex justify-content-center">
+                    <input type="password" name="password" itemprop="instrument" class="form-control border-2 border-primary p-2 mb-2 border-opacity-150 custom-input w-50" placeholder="ej: 5a2D,3" aria-describedby="basic-addon3 basic-addon4">
+                </div>
+                <div class="d-flex justify-content-center">
+                    <button type="submit" itemprop="potentialAction" class="w-50 btn btn-danger">Enviar</button>
+                </div>         
+            </form>
+        </div>    
+     </div>
+</div>  
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Huellas",
+  "url": "https://127.0.0.1:8000.com/",
+  "potentialAction": {
+    "@type": "RegisterAction",
+    "target": "https://127.0.0.1:8000.com/Usuario/login",
+    "result": {
+      "@type": "Person",
+      "name": "Nombre de Usuario",
+      "email": "usuario@ejemplo.com"
+    }
+  }
+}
+</script>
+
+{% endblock %}

@@ -1,0 +1,1 @@
+innerHTML="Nuevo Texto agregado con javascript desde main.js";

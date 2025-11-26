@@ -1,0 +1,486 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--
+	===== USO DE CDN  =============
+  http-equiv=refresh"content30 
+       meta charset=utf-8
+
+	-->
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="keywords" content="huellas cuentso cortos{{ palabras_claves }}" />
+    <meta name="description" content="cuentos, cuentos cortos, cuentros cortos online, {{ descripcion }}" />
+    <meta name="author" content="Nazareno"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}{% if page_title %}{{ page_title }} - {% endif %}{{ site_name }}{% endblock %}</title>
+      <title>huellas cuentos cortos</title>
+
+	<!-- google fonts-->
+    <link href='https://fonts.googleapis.com/css?family=Libre+Caslon+Text' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baskervville:wght@700&family=Bitcount+Grid+Double:wght@100..900&family=Caprasimo&family=Caveat+Brush&family=Lora:ital,wght@0,700;1,700&family=Permanent+Marker&family=Shadows+Into+Light&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton+SC&family=Baskervville:wght@700&family=Bitcount+Grid+Double:wght@100..900&family=Black+Ops+One&family=Cabin+Sketch:wght@400;700&family=Caprasimo&family=Caveat+Brush&family=Cinzel+Decorative:wght@400;700;900&family=Creepster&family=Eater&family=Exile&family=Fredericka+the+Great&family=Gloria+Hallelujah&family=Henny+Penny&family=Homemade+Apple&family=Honk&family=Lora:ital,wght@0,700;1,700&family=Manufacturing+Consent&family=Monoton&family=Permanent+Marker&family=Pirata+One&family=Playwrite+ES:wght@100..400&family=Press+Start+2P&family=Protest+Revolution&family=Rock+Salt&family=Rubik+Bubbles&family=Rye&family=Shadows+Into+Light&family=Silkscreen:wght@400;700&family=Six+Caps&family=Special+Elite&display=swap" rel="stylesheet">
+    <!-- bootstrap -->	
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+	<!-- css static	-->
+	<link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}" />	
+	<link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}" />
+	<link rel="stylesheet" type="text/css" href="{% static 'css/nazareno.css' %}" />
+		<link rel="stylesheet" type="text/css" href="{% static 'css/jquery-ui.css' %}" />
+  </head>
+<style>
+.contenedor {
+  display: flex;
+  justify-content: center;
+
+}
+@media screen and (min-width: 298px) {
+  body {
+    .permanent-marker-regular  {
+        font-size: 75px;
+
+    }  
+    }
+}
+@media screen and (min-width: 992px) {
+  body {
+    .permanent-marker-regular  {
+        font-size: 55px;
+
+    }  
+    }
+}
+.permanent-marker-regular {
+  font-family: "Permanent Marker", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+@media screen and (min-width: 298px) {
+  body {
+    .shadows-into-light-regular  {
+        font-size: 75px;
+
+    }  
+    }
+}
+@media screen and (min-width: 992px) {
+  body {
+    .shadows-into-light-regular  {
+        font-size: 55px;
+
+    }  
+    }
+}
+.shadows-into-light-regular {
+  font-family: "Shadows Into Light";
+  font-weight: 400;
+  font-style: normal;
+}
+@media screen and (min-width: 298px) {
+  body {
+    .caprasimo-regular  {
+        font-size: 75px;
+
+    }  
+    }
+}
+@media screen and (min-width: 992px) {
+  body {
+    .caprasimo-regular  {
+        font-size: 55px;
+
+    }  
+    }
+}
+.caprasimo-regular {
+  font-family: "Caprasimo", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+#texto-centrado {
+    font-family: "Baskervville", serif;
+}
+
+@media screen and (min-width: 268px) {
+  body {
+    #texto-centrado {
+        font-size: 18px;
+
+    }  
+    }
+}
+@media screen and (min-width: 598px) {
+  body {
+    #texto-centrado {
+        font-size: 20px;
+
+    }  
+    }
+}
+@media screen and (min-width: 690px) {
+  body {
+        #texto-centrado {
+        font-size: 25px;
+
+            }
+
+    }
+}
+@media screen and (min-width: 806px) {
+  body {
+        #texto-centrado {
+        font-size: 28px;
+
+            }
+
+    }
+}
+
+@media screen and (min-width: 868px) {
+  body {
+    #texto-centrado {
+        font-size: 30px;
+
+    }  
+
+    }
+}
+@media screen and (min-width: 1008px) {
+  body {
+  #texto-centrado {
+        font-size: 35px;
+    }  
+  }
+}
+
+@media screen and (min-width: 1210px) {
+    body {
+    #texto-centrado {
+        font-size: 44px;
+    }
+  }
+}
+#texto-centrado {
+
+  font-family: "Baskervville", serif;
+
+}
+@media screen and (min-width: 410px) {
+    body {
+    #zapato {
+        width: 50%;
+    }
+  }
+}
+@media screen and (min-width: 910px) {
+    body {
+    #zapato {
+        width: 30%;
+    }
+  }
+}  
+
+@media screen and (min-width: 510px) {
+    body {
+    #sparkText {
+        font-size: 16px;
+    }
+  }
+}
+@media screen and (min-width: 610px) {
+    body {
+    #sparkText {
+        font-size: 20px;
+    }
+  }
+}
+@media screen and (min-width: 710px) {
+    body {
+    #sparkText {
+        font-size: 23px;
+    }
+  }
+}
+@media screen and (min-width: 810px) {
+    body {
+    #sparkText {
+        font-size: 27px;
+    }
+  }
+}
+@media screen and (min-width: 910px) {
+    body {
+    #sparkText {
+        font-size: 29px;
+    }
+  }
+}
+@media screen and (min-width: 1010px) {
+    body {
+    #sparkText {
+        font-size: 33px;
+    }
+  }
+}
+@media screen and (min-width: 1210px) {
+    body {
+    #sparkText {
+        font-size: 39px;
+    }
+  }
+}
+#sparkText {
+      max-width: 90%;
+      margin: 0 auto;
+      line-height: 1.5;
+      word-wrap: break-word;
+      white-space: normal;
+      text-align: center;
+    }
+
+    .word {
+      display: inline-block;
+      margin-right: 0.5em;
+      white-space: nowrap;
+    }
+
+    .letter {
+      opacity: 0;
+      display: inline-block;
+    }
+.seleccionar {
+      width: 100%;
+      height: 40vh; /* altura igual a la ventana */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      transform: scale(0.95);
+    }
+   .seleccionar {
+      width: 100%;
+      height: 40vh; /* altura igual a la ventana */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      transform: scale(0.95);
+    }
+
+
+.manufacturing-consent-regular {
+  font-family: "Manufacturing Consent", system-ui;
+  font-weight: 400;
+  font-style: normal;
+   font-size: 2rem;
+    color:rgb(68, 68, 68);
+}
+.silkscreen-regular {
+  font-family: "Silkscreen", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+    color:rgb(68, 68, 68);
+  font-size: 2.1rem;
+
+
+}
+.special-elite-regular {
+  font-family: "Special Elite", system-ui;
+  font-weight: 400;
+  font-style: normal;
+    color: rgb(68, 68, 68);
+  font-size: 2rem;
+
+
+}
+.playwrite-es {
+  font-family: "Playwrite ES", cursive;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  color: rgb(68, 68, 68);
+  font-size: 2.1rem;
+
+  }
+.bitcount-grid-double {
+  font-family: "Bitcount Grid Double", system-ui;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-variation-settings:
+    "slnt" 0,
+    "CRSV" 0.5,
+    "ELSH" 0,
+    "ELXP" 0;
+  font-size: 2rem;
+    color:rgb(68, 68, 68);
+
+}
+.lora {
+  font-family: "Lora", serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 3rem;
+    color:rgb(68, 68, 68);
+
+}
+.homemade-apple-regular {
+  font-family: "Homemade Apple", cursive;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 2.5rem;
+
+}
+.fredericka-the-great-regular {
+  font-family: "Fredericka the Great", serif;
+  font-weight: 600;
+  font-style: normal;
+  color: rgb(68, 68, 68);
+  font-size: 2.1rem;
+
+}
+.cinzel-decorative-regular {
+  font-family: "Cinzel Decorative", serif;
+  font-weight: 600;
+  font-style: normal;
+  color: rgb(68, 68, 68);
+  font-size: 1.7rem;
+
+}
+.anton-sc-regular {
+  font-family: "Anton SC", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 2.5rem;
+}
+.roboto {
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+.rye-regular {
+  font-family: "Rye", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+</style>
+  <body>
+    {% block contenido %}{% endblock %}
+  	{% block mercado %}{% endblock %}
+    {% block comunicacion %}{% endblock %}  
+    {% block usuarios_content %}{% endblock %}
+		{% block ver_productos %}{% endblock %}
+    <!-- jquery para producción 
+     
+    		 block ajax  endblock 
+
+    			block content  endblock
+    		block cuentos  endblock 
+      block cue_com  endblock 
+      block cue_mie  endblock 
+       block cue_tri  endblock 
+       block contenido  endblock 
+    
+    -->
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+		<script type="text/javascript" src="{% static 'js/jquery.js' %}"></script> 
+		<script src="http://cdn.jsdelivr.net/jquery.cookie/1.4.1/jquery.cookie.min.js"></script>
+		<script type="text/javascript" src="{% static 'js/jquery-ui.min.js' %}"></script> 
+	       <script src="{% static 'js/minified/gsap.min.js' %}" ></script>
+	       <script src="{% static 'js/minified/ScrollTrigger.min.js' %}" ></script>
+    <script src="{% static 'js/texto_escrito.js' %}"></script>
+    <script src="{% static 'js/pisada.js' %}"></script>
+
+    {% block scripts %}
+    <script src="js/minified/gsap.min.js"></script>
+    <script src="js/minified/ScrollTrigger.min.js"></script>
+    <script src="js/texto_escrito.js"></script>
+    <script src="js/pisada.js"></script>
+		{% endblock %}
+	<div class="container-fluid bg-dark text-center text-white">
+    <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top">
+      <!-- Grid container -->
+      <div class="col mb-3"> 
+            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-fingerprint"  viewBox="0 0 16 26">
+            <path d="M8.06 6.5a.5.5 0 0 1 .5.5v.776a11.5 11.5 0 0 1-.552 3.519l-1.331 4.14a.5.5 0 0 1-.952-.305l1.33-4.141a10.5 10.5 0 0 0 .504-3.213V7a.5.5 0 0 1 .5-.5Z"/>
+            <path d="M6.06 7a2 2 0 1 1 4 0 .5.5 0 1 1-1 0 1 1 0 1 0-2 0v.332q0 .613-.066 1.221A.5.5 0 0 1 6 8.447q.06-.555.06-1.115zm3.509 1a.5.5 0 0 1 .487.513 11.5 11.5 0 0 1-.587 3.339l-1.266 3.8a.5.5 0 0 1-.949-.317l1.267-3.8a10.5 10.5 0 0 0 .535-3.048A.5.5 0 0 1 9.569 8m-3.356 2.115a.5.5 0 0 1 .33.626L5.24 14.939a.5.5 0 1 1-.955-.296l1.303-4.199a.5.5 0 0 1 .625-.329"/>
+            <path d="M4.759 5.833A3.501 3.501 0 0 1 11.559 7a.5.5 0 0 1-1 0 2.5 2.5 0 0 0-4.857-.833.5.5 0 1 1-.943-.334m.3 1.67a.5.5 0 0 1 .449.546 10.7 10.7 0 0 1-.4 2.031l-1.222 4.072a.5.5 0 1 1-.958-.287L4.15 9.793a9.7 9.7 0 0 0 .363-1.842.5.5 0 0 1 .546-.449Zm6 .647a.5.5 0 0 1 .5.5c0 1.28-.213 2.552-.632 3.762l-1.09 3.145a.5.5 0 0 1-.944-.327l1.089-3.145c.382-1.105.578-2.266.578-3.435a.5.5 0 0 1 .5-.5Z"/>
+            <path d="M3.902 4.222a5 5 0 0 1 5.202-2.113.5.5 0 0 1-.208.979 4 4 0 0 0-4.163 1.69.5.5 0 0 1-.831-.556m6.72-.955a.5.5 0 0 1 .705-.052A4.99 4.99 0 0 1 13.059 7v1.5a.5.5 0 1 1-1 0V7a3.99 3.99 0 0 0-1.386-3.028.5.5 0 0 1-.051-.705M3.68 5.842a.5.5 0 0 1 .422.568q-.044.289-.044.59c0 .71-.1 1.417-.298 2.1l-1.14 3.923a.5.5 0 1 1-.96-.279L2.8 8.821A6.5 6.5 0 0 0 3.058 7q0-.375.054-.736a.5.5 0 0 1 .568-.422m8.882 3.66a.5.5 0 0 1 .456.54c-.084 1-.298 1.986-.64 2.934l-.744 2.068a.5.5 0 0 1-.941-.338l.745-2.07a10.5 10.5 0 0 0 .584-2.678.5.5 0 0 1 .54-.456"/>
+            <path d="M4.81 1.37A6.5 6.5 0 0 1 14.56 7a.5.5 0 1 1-1 0 5.5 5.5 0 0 0-8.25-4.765.5.5 0 0 1-.5-.865m-.89 1.257a.5.5 0 0 1 .04.706A5.48 5.48 0 0 0 2.56 7a.5.5 0 0 1-1 0c0-1.664.626-3.184 1.655-4.333a.5.5 0 0 1 .706-.04ZM1.915 8.02a.5.5 0 0 1 .346.616l-.779 2.767a.5.5 0 1 1-.962-.27l.778-2.767a.5.5 0 0 1 .617-.346m12.15.481a.5.5 0 0 1 .49.51c-.03 1.499-.161 3.025-.727 4.533l-.07.187a.5.5 0 0 1-.936-.351l.07-.187c.506-1.35.634-2.74.663-4.202a.5.5 0 0 1 .51-.49"/>
+          </svg>
+      
+        <span style="font-size: 1.5rem;" class="press-start-2p-regular">Huellas</span>
+        <p class="text-start ps-4">Bienvenido a una comunidad que comparte lo poco que nos hace quienes somos</p>
+      </div>
+
+      <div class="col mb-3"> 
+        <h4>Cuenta</h4>
+        <ul class="nav flex-column">
+          <li class="nav-item mb-2">
+          <a href="{% url 'registro' %}" id="sin_link" class="p-0 text-white nav-link">Registro</a>
+          </li>
+          <li class="nav-item mb-2">
+          <a href="{% url 'login' %}" id="sin_link" class="p-0 text-white nav-link">Login</a>
+          </li>
+          <li class="nav-item mb-2">
+          <a href="{% url 'logout' %}" id="sin_link" class="p-0 text-white nav-link">Logout</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col mb-3"> 
+        <h4>Explora</h4>
+        <ul class="nav flex-column">
+          <li class="nav-item mb-2">
+          <a href="{% url 'ejemplo_localstorage' %}" id="sin_link" class="p-0 text-white nav-link">Lista</a>
+          </li>
+          <li class="nav-item mb-2">
+          <a href="{% url 'usar_ajax' %}" id="sin_link" class="p-0 text-white nav-link">Buscador</a>
+          </li>
+          <li class="nav-item mb-2">
+          <a href="{% url 'cuentos' %}" id="sin_link" class="p-0 text-white nav-link">Cuentos</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col mb-3"> 
+        <h4>Recursos</h4>
+        <ul class="nav flex-column">
+          <li class="nav-item mb-2">
+          <a href="{% url 'contacto' %}" id="sin_link" class="p-0 text-white nav-link">Contacto</a>
+          </li>
+          <li class="nav-item mb-2">
+          <a href="{% url 'preg_resp' %}" id="sin_link" class="p-0 text-white nav-link">Preguntas y Respuestas</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col mb-3"> 
+          <a href="#" id="sin_link" type="button" class="p-0 text-white nav-link btn btn-secondary" style="width: 8rem; background-color: rgb(114, 114, 114);"><i class="bi bi-arrow-up-circle"></i>
+Muy bajo? volve al principio</a>
+ 
+      </div>
+      <!-- Grid container -->
+    </footer>
+    <div class="d-flex flex-column flex-sm-row justify-content-between pb-1 pt-3 border-top"> 
+      <p>© 2025 Huellas. A menos que sea escrito, el contenido de esta pagina esta licenciado bajo Bienes Comunes Atribución-CompartirIgual 3.0 Licencia</p>
+    </div> 
+    <div class="pb-3">
+      <a class="bi bi-facebook icon-spacing fs-1 me-4" href="https://www.facebook.com/"></a>
+      <a class="bi bi-reddit icon-spacing fs-1 me-4" style="color: #ff6314;" href="https://www.reddit.com/"></a>
+      <a class="bi bi-snapchat icon-spacing fs-1 me-4" style="color: #ffe414;" href="https://www.snapchat.com/"></a>
+      <a class="bi bi-twitter icon-spacing fs-1 me-4" style="color: #1da1f2;" href="https://x.com/" alt="twitterx"></a>
+      <a class="bi bi-whatsapp icon-spacing fs-1 me-4" style="color: #25d366;" href="https://www.whatsapp.com/"></a>
+      <a class="bi bi-twitter-x icon-spacing fs-1" href="https://x.com/" style="color: white;" alt="twitter"></a>
+    </div>
+  </div>
+	</body>
+</html>

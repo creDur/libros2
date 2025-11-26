@@ -1,0 +1,27 @@
+{% extends "plantilla_inicio.html" %}
+{% load static %}
+
+{% block cue_tri %}
+<div style="background-color: #26547C;">
+
+<div class="container-fluid ps-5 pb-5" style="background-color: #26547C; color: aliceblue;">
+      {% for mensaje in titulo|slice:"0:9" %}
+        <div  itemscope itemtype=" https://schema.org/Book">       
+            <h1 itemprop="name" class="permanent-marker-regular">{{mensaje.nombre}}</h1>
+            <h4 itemprop="author">Por:{{mensaje.usuario}}</h4>
+            <h5 itemprop="datePublished">Publicado:{{mensaje.fecha_nacimiento}}</h5>
+            <hr>        
+            <p itemprop="text">{{mensaje.descripcion}}</p>
+        </div> 
+        {% endfor %}
+        <center><a href="{% url 'ejemplo_localstorage' %}" style="font-size: 40px; width: 350px;  font-family: Rye serif;font-weight: 400; font-style: normal;" class="bi bi-plus-circle nav-link rounded border border-5"> Ver Todos</a></center>  
+    </div>
+    </div>
+     
+<!--
+
+
+-->
+{% endblock %}  
+
+ <!---->

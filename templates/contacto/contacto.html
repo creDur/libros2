@@ -1,0 +1,121 @@
+{% extends "plantilla_contacto.html" %}
+{% block title %}Contacto{% endblock %}
+{% load static %}
+{% load i18n %}
+{% block contacto %}
+<!-- ---------------------------------------------------------------------------
+ 
+------------------------------------------------------------------------------->
+
+<div class="container-fluid">
+  <div class="row reflexion justify-content-around align-items-center border" style="padding-top:20px;">   
+    <div class="col-12 col-md-5 contacto_form" style="padding-bottom:15px;">
+            <div class="d-flex justify-content-center align-items-center pb-3">
+             <h1 class="h1juan"></h1>
+            </div> 
+            <h2> ¿En qué podemos ayudarte?</h2>
+            <p></p>
+            <form id="contact" action="" method="post" class="col-xs-12" style="padding-top: 20px;">{% csrf_token %}
+              <div class="col-12 form-group">
+                <div class="mb-3">	       
+                  <label for="id_nombre" class="form-label fs-4">Nombre:</label>
+                  <div class="input-group">
+                   <input type="text" name="nombre" maxlength="50" id="id_nombre" class="form-control border-2 border-primary p-2 mb-2 border-opacity-150 custom-input" placeholder="ej: Tomas">
+                  </div>
+                    <div class="form-text" id="basic-addon4">Si queres podes usar un seudonimo para mantener tu anonimida.</div>
+                </div>
+                <div class="mb-3">
+                  <label for="id_descripcion" class="form-label fs-4">Descripcion:</label>
+                  <div class="input-group">
+                  <textarea name="descripcion" cols="40" rows="10" required="" id="id_descripcion" class="form-control border-2 border-primary p-2 mb-2" placeholder="Tengo un/a pregunta/problema"></textarea>
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <label for="id_mail" class="form-label fs-4">Mail:</label>
+                  <div class="input-group">
+                    <input type="email" name="mail" maxlength="50" id="id_mail" class="form-control border-2 border-primary p-2 mb-2 border-opacity-150 custom-input" placeholder="ej: Tomas14@gmail.com">
+                      <div class="form-text" id="basic-addon4">Si resolvemos tu problema se te mensajeara por si prodria usarse su pregunta en Preguntas y Respuestas.</div>
+                  </div>
+                </div>
+                <!--
+                <div class="mb-3">
+                  <label for="id_telefono" class="form-label fs-4">Telefono:</label> 
+                  <div class="input-group ">
+                    <input type="text" name="telefono" maxlength="50" id="id_telefono" class="form-control border-2 border-primary p-2 mb-2 border-opacity-150 custom-input" placeholder="ej: 451198">
+                  </div>
+                </div>-->
+                <div class="mb-3">
+                  <label for="id_fecha">Fecha:</label>
+                  <div class="input-group">
+                    <input type="text" name="fecha" value="2025-09-10" id="id_fecha" class="form-control border-2 border-primary p-2 mb-2 border-opacity-150 custom-input">
+                    <input type="hidden" name="initial-fecha" value="2025-09-10 11:40:13" id="initial-id_fecha">
+                  </div>
+                  <div class="form-text" id="basic-addon4">Se respondera entre 1 a 7 dias laborales, ademas se le dira que se ha recivido un mensaje.</div>
+                </div>
+                  <label for="id_captcha_1">Captcha:</label>
+                  {{form.captcha}}
+              </div> 
+              <div class="row justify-content-between">
+                <div class="col-12 pt-3">
+                  <button type="submit" class="col-12 btn btn-danger">Enviar</button>
+                </div>
+              </div>                           
+            </form>
+            <h2>Si su consulta puede estar respondida en:</h2>
+            <a href="" class="nav-link">Preguntas y respuestas</a>
+      </div>    
+    </div>
+  </div> 
+
+
+
+    
+<section class="container-fluid ">
+    <div class="row" style="padding-top:10px; ">
+        <div class="col-12" style="padding:0px;  ">
+           <br/> 
+        </div>
+    </div>
+</section>
+   
+  
+
+
+
+{% endblock %}
+
+{% block javascript %}
+
+<script src="http://cdn.jsdelivr.net/jquery.cookie/1.4.1/jquery.cookie.min.js"></script> 
+<script type="text/javascript" src="{% static 'js/juan_ajax.js' %}"></script>
+
+ 
+     
+
+	<script>
+		$("#id_fecha").css({'display':'none'});
+		//$("#id_fecha").parent().find("label").css({'display':'none'});
+		$("#id_estado_respuesta").css({'display':'none'});
+		$("#id_estado_respuesta").parent().find("label").css({'display':'none'});
+		
+		
+		$("#formulario_contacto li").css({'list-style':'none'});
+ 
+		//$("#formulario_contacto li label").css({'width':"100%", 'text-align':'center',});
+		//$("#formulario_contacto li input").css({'width':"100%", 'text-align':'center',});
+
+		$("input").css({'width':"100%", 'text-align':'center', 'margin-bottom':'7px'});
+		$("textarea").css({'width':"100%", 'text-align':'center',});
+
+
+		$("#id_nombre").attr("placeholder", "Nombre");
+		$("#id_descripcion").attr("placeholder", "Descripcion");
+		$("#id_mail").attr("placeholder", "Mail");
+		$("#id_telefono").attr("placeholder", "Teléfono");
+		$("#id_captcha_1").attr("placeholder", "Captcha");
+	</script>
+	
+
+	
+	
+{% endblock %}

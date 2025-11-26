@@ -1,0 +1,88 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block usuarios_content %}
+
+<div class="container-fluid" style="padding:0px; margin: 0px;"> 
+    <div class="row" style="padding:0px; margin: 0px;"> 
+        <div class="col-12" style="padding:0px; margin: 0px;"> 
+            <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#" style="font-size: x-large; font-weight: 600; font-family: Bitcount Grid Double;">Huell<i class="navbar-brand bi bi-fingerprint">s</i></a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarScroll">
+                        <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                            <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="{% url 'home' %}"><b>CASA</b></a>
+                            </li>
+                            <li class="nav-item">
+                            <a class="nav-link" href="{% url 'cuentos' %}"><b>Categorias</b></a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <button class="nav-link dropdown-toggle" href="#" id="navbarDropdown"  role="button" data-bs-toggle="dropdown" aria-expanded="false"> 
+                                Ayuda
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <li>
+                                        <a class="dropdown-item" href="{% url 'contacto' %}">Contacto</a>
+                                    </li>
+                                    <li>
+                                        <!--
+                                        href=" dominio_actual /accounts/register/"
+                                        href=" url 'preg_resp' "
+                                        -->
+                                        <a class="dropdown-item" href="{% url 'preg_resp' %}">Preguntas y respuestas</a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="{% url 'logout' %}">Log out</a>
+                                    </li>
+                                    <li>
+                                    <a class="dropdown-item" href="{% url 'ejemplo_localstorage' %}">Lista de cuentos</a>
+                                    </li>
+                                     
+                                </ul>
+                            </li>
+                            <a class="btn btn-dark" style="border-color: aliceblue;" href="{% url 'cargar' %}">Crear Historia</a>                        
+                            </ul>
+                        
+                            <button class="btn btn-outline-success" type="submit"><a href="{% url 'usar_ajax' %}" class="nav-link"><b>Buscar</b></a></button>
+                    </div>
+                    {% if user.is_authenticated %}
+
+                    {% else %}
+                    
+                    <button id="boton1" type="button1" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal1">
+                        <a class="nav-link" href="{% url 'login' %}">Log in</a>
+                    </button>
+                    <button id="boton2" type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal2">
+                        <a class="nav-link" href="{% url 'registro' %}"><b>Registrarse</b></a>
+                    </button>
+                    {% endif %}
+
+                </div>
+            </nav>
+        </div>
+    </div>
+</div>
+
+{% block Usuario %}{% endblock %}
+
+
+    <!--
+ block content 
+
+block ajax  endblock 
+block contenedor  endblock  
+block contacto  endblock 
+ block cuentos  endblock 
+block cue_com  endblock 
+block cue_mie  endblock 
+block cue_tri  endblock 
+ block localst  endblock 
+ block tienda  endblock 
+ block Usuario  endblock 
+
+	-->
+    
+{% endblock  %}

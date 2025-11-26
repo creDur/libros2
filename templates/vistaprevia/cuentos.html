@@ -1,0 +1,56 @@
+{% extends "plantilla_inicio.html" %}
+{% load static %}
+
+{% block cuentos %}
+<center><h1 style="background-color: yellow; color: red;" class="p-0 m-0">En cuarentena</h1></center> 
+<section class="container-fluid" style="background-color: antiquewhite;">
+    <div class="row contenedor gap-5 pt-5" itemscope itemtype=" https://schema.org/Book">
+            <div class="col-12 col-md-2 p-0 m-0 rounded-5 pt-5" style="background-color: rgb(99, 99, 99); height: 300px;">
+                <center><a class="playwrite-es nav-link">Dia a dia</a></center>
+            </div>
+            <div class="col-12 col-md-2 p-0 m-0 rounded-5 pt-5" style="background-color:rgb(99, 99, 99); height: 300px;">
+                <center><a class="special-elite-regular nav-link">Misterio</a></center>  
+            </div>
+            <div class="col-12 col-md-2 p-0 m-0 rounded-5 pt-5" style="background-color: rgb(255, 0, 0); height: 300px;">
+                <center><a itemprop="isAccessibleForFree" class="permanent-marker-regular nav-link" style="color: aliceblue;" href="{% url 'cuentos_mie' %}" >Miedo</a></center>
+            </div>            
+            <div class="col-12 col-md-2 p-0 m-0 rounded-5 pt-5" style="background-color: rgb(99, 99, 99); height: 300px;">
+               <center><a class="bitcount-grid-double nav-link">Habilidad</a></center>
+            </div>
+    </div>
+    <div class="row contenedor gap-5 mt-5" itemscope itemtype=" https://schema.org/Book">
+            <div class="col-12 col-md-2 p-0 m-0 rounded-5 pt-5" style="background-color:#FFD166; height: 300px;">
+                  <center><a class="caprasimo-regular nav-link " itemprop="isAccessibleForFree isFamilyFriendly
+"  href="{% url 'cuentos_com' %}">Comico</a></center>
+            </div>
+            <div class="col-12 col-md-2 p-0 m-0 rounded-5 pt-5" style="background-color: rgb(99, 99, 99); height: 300px;">
+                  <center><a class="silkscreen-regular nav-link">Errores</a></center>
+            </div>
+            <div class="col-12 col-md-2 p-0 m-0 rounded-5 pt-5 border border-5" style="background-color: rgb(99, 99, 99); height: 300px;">
+                <center><a class="lora nav-link">Charla</a></center>
+            </div>
+            <div class="col-12 col-md-2 p-0 m-0 rounded-5 pt-5" style="background-color: rgb(99, 99, 99); height: 300px;">
+                <center><a class="fredericka-the-great-regular nav-link">Familiar</a></center>
+            </div>
+    </div>
+    <div class="row contenedor gap-5 mt-5" itemscope itemtype=" https://schema.org/Book">
+            <div class="col-12 col-md-2 p-0 m-0 rounded-5 pt-5" style="background-color: rgb(99, 99, 99); height: 300px;">
+                <center><a class="homemade-apple-regular nav-link">Nervios</a></center>  
+            </div>
+            <div class="col-12 col-md-2 p-0 m-0 rounded-5 pt-5" style="background-color: #26547C; height: 300px;">
+                <center><a class="shadows-into-light-regular nav-link" itemprop="isAccessibleForFree"  href="{% url 'cuentos_tri' %}">Tristesa</a></center>
+            </div>
+            <div class="col-12 col-md-2 p-0 m-0 rounded-5 pt-5" style="background-color: rgb(99, 99, 99); height: 300px;">
+                <center><a class="cinzel-decorative-regular nav-link">Sueños dormido</a></center>
+            </div>
+
+            <div class="col-12 col-md-2 p-0 m-0 rounded-5 pt-5" style="background-color: rgb(99, 99, 99); height: 300px;">
+                <center><a class="anton-sc-regular nav-link">historia</a></center>   
+            </div>
+
+    </div>
+</section>
+
+{% endblock %}  
+
+ <!---->

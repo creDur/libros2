@@ -1,0 +1,141 @@
+{% extends "plantilla_inicio.html" %}
+{% load static %}
+
+{% block ajax %}
+
+    <!-- Puedes agregar más slides aquí -->
+<div style="background-color: #ffffff; color: #000000;">
+<div class="container pt-5">
+  <div class="row">
+    <div class="col-12 prueba">
+      <section id="todos_los_productos" class="row">
+        <div id="contenedor_filtros" class="row">
+          <div id="filtros_productos" class="col-xs-12">
+            <form id="searchr-form" action="" method="post" style="color: aliceblue;" class="roboto">
+              <input type="hidden" name="csrfmiddlewaretoken" value="kaukX21baY2rUlxqfBX8yhZ3UZeGqf731VpbnZ9nGUF69BiXsXGnfhZrZaGqALWx">
+              <div class="campo_busqueda col-xs-12">
+                <label for="id_querycom" class="manufacturing-consent-regular">Ingresar el nombre del libro a buscar:</label>
+                <center>          
+                  <input class="roboto rounded fs-4" type="text" name="querycom" class="form ui-autocomplete-input" required="" id="id_querycom" autocomplete="off" style="height: 10vh; width: 70vh;">
+                  <input class="roboto rounded" type="button" id="boton_prod" value="Ver datos"  style="height: 60px; font-size: 30px;">
+              </center>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div id="contenedor_filtrado" class="col-xs-10 col-sm-offset-2 col-sm-8 col-md-offset-4 col-md-4 rye-regular">
+        </div>
+      </section>
+    </div>
+  </div>
+</div>
+
+
+
+{% endblock  %}
+{% block scripts %}
+<script src="https://cdn.jsdelivr.net/jquery.cookie/1.4.1/jquery.cookie.min.js"></script> 
+<script type="text/javascript" src="{% static 'js/jquery-ui.min.js' %}"></script> 
+<script type="text/javascript" src="{% static 'js/ajax.js' %}"></script>
+
+<script type="text/javascript">
+  $( "#id_querycom" ).autocomplete({
+       source:"/buscar_libro/"
+   });
+</script>
+ 
+<script = "text/javascript">
+/*jslint browser: true*/
+/*jslint plusplus: true*/
+/*global FormData: false */
+/*global $, jQuery, alert, console*/
+/*..............................................................................................
+... PARA VALIDAR LOS DATOS .....................................................
+.............................................................................................*/
+var csrftoken = $.cookie('csrftoken');
+function csrfSafeMethod(method) {
+    "use strict";
+    return (/^(GET|HEAD|OPTIONS|TRACE)$/.test(method));
+}
+
+function AgregarI(cada_producto_id, valor) {
+    "use strict";
+
+    console.log(cada_producto_id, valor)
+    $.ajax({
+        beforeSend : function (xhr, settings) {
+            if (!csrfSafeMethod(settings.type) && !this.crossDomain) {
+                xhr.setRequestHeader("X-CSRFToken", csrftoken);
+            }
+        },
+        url : "/tienda/agregar/",
+        type : "GET",
+        data : { cada_producto_id:cada_producto_id, valor:valor},
+        success : function (json) {
+            console.log(json[0].idproducto.toString())
+            console.log(json[0].cantida.toString())
+            localStorage.setItem(json[0].idproducto.toString(), json[0].cantida.toString());
+            //location.reload();
+            console.log("ok++++++++++++++++++++++++")
+        },
+        error : function (xhr, errmsg, err) {
+            console.log('Error en carga de respuesta');
+        }
+    });
+} 
+
+
+
+
+
+$('.agregar').click(function (event) {
+    "use strict";
+    event.preventDefault();
+    let cada_producto_id = $(this).parent().find('.verid').val();
+    let valor = $(this).parent().find('.vervalor').val();
+    console.log(cada_producto_id);
+    console.log(valor);
+
+    //PASO 1: Remuevo todo item que no inicia con utn_
+    let i;
+    for(i = 0; i < localStorage.length; i++){
+        let clave_eliminar = localStorage.key(i);
+        console.log(typeof clave_eliminar);
+        console.log(clave_eliminar);
+        if(!clave_eliminar.startsWith("utn_")){
+            console.log("retorna NO verdadero !!!!!!!!!!!!!");
+            localStorage.removeItem(clave_eliminar);
+            console.log("retorna NO verdadero !!!!!!!!!!!!!");
+        }
+    }
+
+    //PASO 2: Si es la primera vez que selecciono el valor me quedo con "valor=1"
+    //Si ya existia un valor en la base tomo ese valor en lugar de 1
+    for(i = 0; i < localStorage.length; i++){
+        let clave = localStorage.key(i);
+        let el_valor = localStorage[clave];
+        if(clave == cada_producto_id){
+            console.log("-----1112------")
+            console.log(clave);
+            console.log(valor);
+            valor = el_valor;
+            console.log("-----1112------")
+        }else{
+            console.log("no hay coincidenciaaaa");
+        }   
+    }
+
+    AgregarI(cada_producto_id, valor);
+
+});
+
+
+
+
+
+
+</script>
+
+
+{% endblock %}
+ 

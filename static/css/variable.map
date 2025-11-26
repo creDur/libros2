@@ -1,0 +1,12 @@
+{
+	"version": 3,
+	"file": "variable.css",
+	"sources": [
+		"../scss/variable.scss"
+	],
+	"sourcesContent": [
+		"/* COLORES */\r\n$col1: aliceblue;\r\n$col2: rgb(0, 0, 0);\r\n$col3: black;\r\n$col4: rgb(80, 12, 12);\r\n$col5: blue;\r\n$col6: #000; \r\n$col7: #fff; \r\n$col8: #000000;\r\n\r\n\r\n/*COLORES_DE_FONDO*/\r\n$bgc1: gold;\r\n$bgc2: rgb(87, 88, 85);\r\n$bgc3: antiquewhite;\r\n$bgc4: #5D5EE6; \r\n$bgc5: #E6D468;\r\n$bgc6: #57E668;\r\n$bgc7: #6AD2E6;\r\n$bgc8: #AD6DE6;\r\n$bgc9: #E6746B;\r\n\r\n/*BODER*/\r\n$bor1: solid 1px #fffdfd;"
+	],
+	"names": [],
+	"mappings": "AAAA,aAAa;AAWb,oBAAoB;AAWpB,SAAS"
+}

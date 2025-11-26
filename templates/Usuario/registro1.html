@@ -1,0 +1,78 @@
+{% extends "plantilla_usuario.html" %}
+{% block title %}Contacto{% endblock %}
+{% load static %}
+{% load i18n %}
+{% block Usuario %}
+<!-- ---------------------------------------------------------------------------
+-------------- 
+ <div class="container">
+
+ 
+</div> 
+------------------------------------------------------------------------------->
+
+<div class="container-fluid">
+    <div class="row reflexion justify-content-around align-items-center border" style="padding-top:20px;">   
+        <div class="col-12 col-md-5 contacto_form" style="padding-bottom:15px;">
+            <h1 class="h1juan" style="padding-left:100px;">Hola estoy en registro</h1>  
+                <form method="POST" action="">{% csrf_token %}
+                    {{form}}
+                    <button type="submit" class="btn btn-danger float-right">
+                        Registrar
+                    </button>
+                </form>  
+        </div>    
+     </div>
+</div>  
+
+    
+<section class="container-fluid ">
+    <div class="row" style="padding-top:10px; ">
+        <div class="col-12" style="padding:0px;  ">
+           <br/> 
+        </div>
+    </div>
+</section>
+   
+    <div class="container-fluid">
+        <div class="row reflexion justify-content-around align-items-center border" style="padding-top:20px;">   
+            <div class="col-12 col-md-5 contacto_form" style="padding-bottom:15px;">
+                <h1 class="h1juan" style="padding-left:100px;">Hola estoy en registro</h1>  
+                <form method="POST" action="">
+                    <input type="hidden" name="csrfmiddlewaretoken" value="oX3upV6Opz7du3RCKFiB5Xxr5UoC18HJvOhJy2E5lnZE9uymNMegYpY2dNDOAFNI">    <label for="id_username">Username:</label>
+                    <input type="text" name="username" maxlength="150" autofocus="" required="" id="id_username">
+                    <br>
+                    <span class="helptext">Required. 150 characters or fewer. Letters, digits and @/./+/-/_ only.</span>
+                    <label for="id_email">Email address:</label>
+                        <input type="email" name="email" maxlength="254" id="id_email">
+                    <label for="id_password1">Password:</label>
+                        <input type="password" name="password1" autocomplete="new-password" required="" id="id_password1">
+                        <br>
+                        <span class="helptext">
+                            <ul>
+                                <li>
+                                    Your password can’t be too similar to your other personal information.
+                                </li>
+                                <li>
+                                    Your password must contain at least 8 characters.
+                                </li>
+                                <li>
+                                    Your password can’t be a commonly used password.
+                                </li>
+                                <li>
+                                    Your password can’t be entirely numeric.
+                                </li>
+                            </ul>
+                        </span>
+                    <label for="id_password2">Password confirmation:</label>
+                    <input type="password" name="password2" autocomplete="new-password" required="" id="id_password2">
+                    <br>
+                    <span class="helptext">Enter the same password as before, for verification.</span>
+                    <button type="submit" class="btn btn-danger float-right">
+                            Registrar
+                    </button>
+                </form>  
+            </div>    
+        </div>
+    </div>
+{% endblock %}

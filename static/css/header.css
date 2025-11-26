@@ -1,0 +1,283 @@
+/* line 1, ../../../python/django_utn/django_nivel_inicial/sitio_html/python_virtual/archivos/librosonline9/static_dev/scss/header.scss */
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
+/* line 6, ../../../python/django_utn/django_nivel_inicial/sitio_html/python_virtual/archivos/librosonline9/static_dev/scss/header.scss */
+.contenedor {
+  width: 100%;
+}
+
+/* line 10, ../../../python/django_utn/django_nivel_inicial/sitio_html/python_virtual/archivos/librosonline9/static_dev/scss/header.scss */
+#buscador {
+  margin-inline: auto;
+  padding-right: 350px;
+}
+
+/* line 14, ../../../python/django_utn/django_nivel_inicial/sitio_html/python_virtual/archivos/librosonline9/static_dev/scss/header.scss */
+.boton1 {
+  color: aliceblue;
+}
+
+/* line 17, ../../../python/django_utn/django_nivel_inicial/sitio_html/python_virtual/archivos/librosonline9/static_dev/scss/header.scss */
+#boton2 {
+  color: black;
+  background-color: gold;
+}
+
+/* line 21, ../../../python/django_utn/django_nivel_inicial/sitio_html/python_virtual/archivos/librosonline9/static_dev/scss/header.scss */
+.modelo, .modelo1 {
+  background-color: #575855;
+  color: aliceblue;
+}
+
+/* line 25, ../../../python/django_utn/django_nivel_inicial/sitio_html/python_virtual/archivos/librosonline9/static_dev/scss/header.scss */
+#parag {
+  color: black;
+}
+
+/* line 28, ../../../python/django_utn/django_nivel_inicial/sitio_html/python_virtual/archivos/librosonline9/static_dev/scss/header.scss */
+#parag1 {
+  padding-left: 19px;
+  color: #500c0c;
+}
+
+/* line 32, ../../../python/django_utn/django_nivel_inicial/sitio_html/python_virtual/archivos/librosonline9/static_dev/scss/header.scss */
+#linker {
+  color: blue;
+}
+
+/* line 35, ../../../python/django_utn/django_nivel_inicial/sitio_html/python_virtual/archivos/librosonline9/static_dev/scss/header.scss */
+#pdrop {
+  padding-left: 19px;
+}
+
+/* line 38, ../../../python/django_utn/django_nivel_inicial/sitio_html/python_virtual/archivos/librosonline9/static_dev/scss/header.scss */
+#dropd {
+  background-color: antiquewhite;
+}
+
+/* line 41, ../../../python/django_utn/django_nivel_inicial/sitio_html/python_virtual/archivos/librosonline9/static_dev/scss/header.scss */
+#buscador [type=search] {
+  margin-right: auto;
+  width: 300px;
+  padding: 5px;
+}
+
+@media (max-width: 576px) {
+  /* line 47, ../../../python/django_utn/django_nivel_inicial/sitio_html/python_virtual/archivos/librosonline9/static_dev/scss/header.scss */
+  .dropdown-item::before {
+    transform: rotate(-90deg);
+  }
+}
+
+/* line 51, ../../../python/django_utn/django_nivel_inicial/sitio_html/python_virtual/archivos/librosonline9/static_dev/scss/header.scss */
+#contenedor {
+  width: 100%;
+}
+
+/* line 54, ../../../python/django_utn/django_nivel_inicial/sitio_html/python_virtual/archivos/librosonline9/static_dev/scss/header.scss */
+.contenedor_main {
+  position: absolute;
+  width: 100%;
+  float: left;
+}
+
+/* line 59, ../../../python/django_utn/django_nivel_inicial/sitio_html/python_virtual/archivos/librosonline9/static_dev/scss/header.scss */
+.juntos {
+  float: left;
+  width: 100%;
+  height: 500px;
+  background-color: #5D5EE6;
+  border: solid 1px #fffdfd;
+  margin: 0px;
+  padding: 0px;
+}
+
+/* line 68, ../../../python/django_utn/django_nivel_inicial/sitio_html/python_virtual/archivos/librosonline9/static_dev/scss/header.scss */
+#primero {
+  width: 80%;
+}
+
+/* line 72, ../../../python/django_utn/django_nivel_inicial/sitio_html/python_virtual/archivos/librosonline9/static_dev/scss/header.scss */
+#segundo {
+  width: 30%;
+  height: 100px;
+  float: left;
+  height: auto;
+}
+
+/* line 78, ../../../python/django_utn/django_nivel_inicial/sitio_html/python_virtual/archivos/librosonline9/static_dev/scss/header.scss */
+#segundo1 {
+  width: 30%;
+  float: left;
+  height: auto;
+  width: 100%;
+  height: 250px;
+}
+
+/* line 85, ../../../python/django_utn/django_nivel_inicial/sitio_html/python_virtual/archivos/librosonline9/static_dev/scss/header.scss */
+#tercero {
+  width: 30%;
+  height: 100px;
+  float: left;
+  height: auto;
+}
+
+/* line 91, ../../../python/django_utn/django_nivel_inicial/sitio_html/python_virtual/archivos/librosonline9/static_dev/scss/header.scss */
+#tercero1 {
+  float: left;
+  height: auto;
+  height: 250px;
+  width: 100%;
+}
+
+/* line 97, ../../../python/django_utn/django_nivel_inicial/sitio_html/python_virtual/archivos/librosonline9/static_dev/scss/header.scss */
+.overlay-text1 {
+  position: absolute;
+  top: 75%;
+  left: 31%;
+  transform: translate(-50%, -50%);
+  color: #000;
+  padding: 10px 20px;
+  font-size: 20px;
+  text-align: left;
+}
+
+/* line 107, ../../../python/django_utn/django_nivel_inicial/sitio_html/python_virtual/archivos/librosonline9/static_dev/scss/header.scss */
+.overlay-text2 {
+  position: absolute;
+  top: 70%;
+  left: 83%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  padding: 10px 20px;
+  padding-bottom: 390px;
+  font-size: 20px;
+  text-align: right;
+}
+
+/* line 118, ../../../python/django_utn/django_nivel_inicial/sitio_html/python_virtual/archivos/librosonline9/static_dev/scss/header.scss */
+.overlay-text3 {
+  position: absolute;
+  top: 107%;
+  left: 83%;
+  transform: translate(-50%, -50%);
+  color: #000000;
+  padding: 10px 20px;
+  padding-bottom: 390px;
+  font-size: 20px;
+  text-align: right;
+}
+
+/* line 129, ../../../python/django_utn/django_nivel_inicial/sitio_html/python_virtual/archivos/librosonline9/static_dev/scss/header.scss */
+#textoh1_1 {
+  font-size: 20px;
+}
+
+/* line 132, ../../../python/django_utn/django_nivel_inicial/sitio_html/python_virtual/archivos/librosonline9/static_dev/scss/header.scss */
+#textop_1 {
+  font-size: 16px;
+}
+
+/* line 135, ../../../python/django_utn/django_nivel_inicial/sitio_html/python_virtual/archivos/librosonline9/static_dev/scss/header.scss */
+#textoh1_2 {
+  font-size: 20px;
+}
+
+/* line 138, ../../../python/django_utn/django_nivel_inicial/sitio_html/python_virtual/archivos/librosonline9/static_dev/scss/header.scss */
+#textop_2 {
+  font-size: 16px;
+}
+
+/* line 141, ../../../python/django_utn/django_nivel_inicial/sitio_html/python_virtual/archivos/librosonline9/static_dev/scss/header.scss */
+#textoh1_3 {
+  font-size: 20px;
+}
+
+/* line 144, ../../../python/django_utn/django_nivel_inicial/sitio_html/python_virtual/archivos/librosonline9/static_dev/scss/header.scss */
+#textop_3 {
+  font-size: 16px;
+}
+
+@media screen and (min-width: 576px) {
+  /* line 149, ../../../python/django_utn/django_nivel_inicial/sitio_html/python_virtual/archivos/librosonline9/static_dev/scss/header.scss */
+  .juntos {
+    background-color: #E6D468;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  /* line 155, ../../../python/django_utn/django_nivel_inicial/sitio_html/python_virtual/archivos/librosonline9/static_dev/scss/header.scss */
+  .juntos {
+    background-color: #57E668;
+    width: 49.5%;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  /* line 161, ../../../python/django_utn/django_nivel_inicial/sitio_html/python_virtual/archivos/librosonline9/static_dev/scss/header.scss */
+  .juntos {
+    background-color: #6AD2E6;
+    width: 33%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  /* line 167, ../../../python/django_utn/django_nivel_inicial/sitio_html/python_virtual/archivos/librosonline9/static_dev/scss/header.scss */
+  .juntos {
+    background-color: #AD6DE6;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  /* line 172, ../../../python/django_utn/django_nivel_inicial/sitio_html/python_virtual/archivos/librosonline9/static_dev/scss/header.scss */
+  .juntos {
+    background-color: #E6746B;
+  }
+}
+
+/* line 176, ../../../python/django_utn/django_nivel_inicial/sitio_html/python_virtual/archivos/librosonline9/static_dev/scss/header.scss */
+#circular {
+  width: 200px;
+  height: 200px;
+  float: left;
+  right: 66%;
+  top: 100%;
+  position: absolute;
+}
+
+/* line 185, ../../../python/django_utn/django_nivel_inicial/sitio_html/python_virtual/archivos/librosonline9/static_dev/scss/header.scss */
+#contenedor_m2 {
+  position: left;
+  width: 100%;
+  float: left;
+  height: 100%;
+}
+
+/* line 191, ../../../python/django_utn/django_nivel_inicial/sitio_html/python_virtual/archivos/librosonline9/static_dev/scss/header.scss */
+#usuarios {
+  position: absolute;
+  top: 113%;
+  left: 40%;
+  color: #000;
+}
+
+/* line 197, ../../../python/django_utn/django_nivel_inicial/sitio_html/python_virtual/archivos/librosonline9/static_dev/scss/header.scss */
+.mail {
+  position: absolute;
+  top: 143%;
+  left: 22%;
+  color: #000;
+}
+
+/* line 203, ../../../python/django_utn/django_nivel_inicial/sitio_html/python_virtual/archivos/librosonline9/static_dev/scss/header.scss */
+.code {
+  position: absolute;
+  top: 153%;
+  left: 22%;
+  color: #000;
+}
+
+/*# sourceMappingURL=header.css.map */
